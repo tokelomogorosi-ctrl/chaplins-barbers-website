@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chaplins Barbers Sevenoaks — Established 1889. Skin fades, scissor cuts, hot towel shaves. Voted best barber in Sevenoaks. Book via WhatsApp: 07383 449899." />
+  <title>Chaplins Barbers | Sevenoaks | Est. 1889</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#C9A84C',
+            'gold-dim': '#a88930',
+            ink: '#0a0a0a',
+            panel: '#111111',
+            card: '#1a1a1a',
+            lift: '#222222',
+            cream: '#f5f5f0',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .hero-video {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.35;
+    }
+
+    .neon-gold {
+      color: #C9A84C;
+      text-shadow: 0 0 30px rgba(201,168,76,0.45), 0 0 60px rgba(201,168,76,0.15);
+    }
+
+    .gold-rule {
+      background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+      height: 1px;
+    }
+
+    .plyr--audio .plyr__controls {
+      background: #1a1a1a;
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 12px;
+      color: #f5f5f0;
+    }
+
+    .plyr--audio .plyr__control--overlaid,
+    .plyr__control--overlaid { background: #C9A84C; }
+
+    .plyr__progress__buffer,
+    .plyr__volume__track { background: rgba(201,168,76,0.2); }
+
+    .plyr__progress input[type=range]::-webkit-slider-runnable-track,
+    .plyr__volume input[type=range]::-webkit-slider-runnable-track { background: rgba(201,168,76,0.3); }
+
+    .track-item.active { border-color: rgba(201,168,76,0.6); background: rgba(201,168,76,0.08); }
+
+    blockquote cite { font-style: normal; }
+
+    .price-row:nth-child(even) { background: rgba(255,255,255,0.03); }
+
+    .whatsapp-btn { background: #25D366; }
+    .whatsapp-btn:hover { background: #1ebe5a; }
+  </style>
+</head>
+<body class="bg-ink text-cream font-sans">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-ink/90 backdrop-blur-sm border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="font-serif font-black text-xl tracking-widest uppercase">
+        Chaplins <span class="text-gold text-sm font-normal tracking-[0.3em] block -mt-1">BARBERS · 1889</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="tel:01732712861" class="hidden sm:block text-cream/50 text-sm hover:text-cream transition-colors">01732 712861</a>
+        <a href="https://wa.me/447383449899?text=Hi%20Sam%2C%20I%27d%20like%20to%20book%20a%20cut%20please"
+           target="_blank" rel="noopener"
+           class="whatsapp-btn text-white font-bold text-sm px-5 py-2.5 rounded-xl transition-all hover:scale-105">
+          Book Now
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-ink pt-16">
+    <video class="hero-video" autoplay muted loop playsinline poster="images/facade.jpeg">
+      <source src="images/hero-loop.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/40 to-ink"></div>
+
+    <!-- 1889 watermark text -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+      <span class="font-serif font-black text-[20vw] text-white/3 leading-none">1889</span>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <p class="text-gold/70 text-xs tracking-[0.4em] uppercase mb-6">Sevenoaks · Est. 1889</p>
+      <h1 class="font-serif font-black text-5xl md:text-7xl lg:text-8xl leading-tight mb-6">
+        The best cut<br />
+        <em class="italic text-gold">you've had</em><br />
+        in years.
+      </h1>
+      <blockquote class="max-w-lg mx-auto mb-8">
+        <p class="text-cream/60 text-sm italic leading-relaxed">"Best haircut I've had in Sevenoaks in 18 years. The attention to detail is second to none."</p>
+        <cite class="text-gold/60 text-xs mt-2 block tracking-wider">— OSTIN LEWIS · GOOGLE</cite>
+      </blockquote>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="https://wa.me/447383449899?text=Hi%20Sam%2C%20I%27d%20like%20to%20book%20a%20cut%20please"
+           target="_blank" rel="noopener"
+           class="whatsapp-btn text-white font-bold text-lg px-8 py-4 rounded-2xl transition-all hover:scale-105 flex items-center justify-center gap-3">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.113.549 4.1 1.51 5.833L.055 23.4l5.7-1.493A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.5-5.4-1.39l-.387-.23-4.016 1.053 1.07-3.912-.252-.4A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Book on WhatsApp
+        </a>
+        <a href="tel:01732712861"
+           class="border border-cream/20 text-cream font-bold text-lg px-8 py-4 rounded-2xl transition-all hover:border-gold/50 hover:text-gold flex items-center justify-center gap-3">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          Call 01732 712861
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF BAR -->
+  <section class="bg-panel py-8 px-4 border-y border-white/5">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <div id="stat-rating" class="text-4xl font-serif font-black neon-gold">0</div>
+        <div class="text-cream/40 text-xs mt-1 tracking-wider uppercase">Google rating</div>
+      </div>
+      <div>
+        <div class="text-4xl font-serif font-black text-gold">Est.</div>
+        <div class="text-cream/40 text-xs mt-1 tracking-wider uppercase">1889</div>
+      </div>
+      <div>
+        <div class="text-4xl font-serif font-black text-gold">Sam</div>
+        <div class="text-cream/40 text-xs mt-1 tracking-wider uppercase">your barber</div>
+      </div>
+      <div>
+        <div class="text-4xl font-serif font-black text-gold">5★</div>
+        <div class="text-cream/40 text-xs mt-1 tracking-wider uppercase">every review</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FELLOW BARBER ENDORSEMENT -->
+  <section class="py-20 px-4 bg-ink" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="gold-rule w-16 mx-auto mb-8 opacity-60"></div>
+      <blockquote>
+        <p class="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed italic text-cream/90">
+          "I'm a barber myself, so I'm very particular about who I trust with my hair and beard.
+          <span class="text-gold not-italic">I go to Sam.</span>
+          Every time he delivers at the highest level."
+        </p>
+        <footer class="mt-8">
+          <cite class="text-gold/60 text-sm tracking-[0.3em] uppercase">Rami Empire · Fellow Barber · Google</cite>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <div class="gold-rule opacity-20"></div>
+
+  <!-- SERVICES & PRICE LIST -->
+  <section id="services" class="py-20 px-4 bg-panel">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-12" data-aos="fade-up">
+        <p class="text-gold/60 text-xs tracking-[0.4em] uppercase mb-3">The menu</p>
+        <h2 class="font-serif font-black text-4xl md:text-5xl">What we do.</h2>
+        <p class="text-cream/50 mt-2">No hidden costs. No surprises. What you see is what you pay.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Haircuts -->
+        <div data-aos="fade-up" data-aos-delay="0">
+          <h3 class="font-serif font-bold text-xl text-gold mb-4 pb-2 border-b border-gold/20">Haircuts</h3>
+          <div class="space-y-0">
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Haircut</span>
+              <span class="font-bold text-gold">£19</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Cut, Wash & Blow Dry</span>
+              <span class="font-bold text-gold">£23</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Clipper Cut</span>
+              <span class="font-bold text-gold">£21</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Skin Fade</span>
+              <span class="font-bold text-gold">£24</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Kids (Under 12)</span>
+              <span class="font-bold text-gold">£14</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Kids Cut, Wash & Blow Dry</span>
+              <span class="font-bold text-gold">£17</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Seniors Haircut</span>
+              <span class="font-bold text-gold">£15</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Seniors Cut, Wash & Blow Dry</span>
+              <span class="font-bold text-gold">£18</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beard & Extras -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h3 class="font-serif font-bold text-xl text-gold mb-4 pb-2 border-b border-gold/20">Beard & Grooming</h3>
+          <div class="space-y-0">
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Beard Trim</span>
+              <span class="font-bold text-gold">£9</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Beard Trim & Shape</span>
+              <span class="font-bold text-gold">£12</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Luxury Hot Towel Shave</span>
+              <span class="font-bold text-gold">£15</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Shape Up of the Hairline</span>
+              <span class="font-bold text-gold">£8</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Threading</span>
+              <span class="font-bold text-gold">£6</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Face Mask</span>
+              <span class="font-bold text-gold">£8</span>
+            </div>
+            <div class="price-row flex justify-between items-center py-3 px-2 rounded">
+              <span class="text-cream/80">Nose Wax & Ears Flame</span>
+              <span class="font-bold text-gold">£4</span>
+            </div>
+          </div>
+
+          <!-- Full Service Package -->
+          <div class="mt-6 bg-card rounded-2xl p-5 border border-gold/20" data-aos="fade-up" data-aos-delay="150">
+            <div class="flex justify-between items-start mb-2">
+              <h4 class="font-serif font-bold text-lg">Full Service Package</h4>
+              <span class="text-3xl font-serif font-black neon-gold">£39</span>
+            </div>
+            <p class="text-cream/50 text-sm">Haircut · Beard Trim & Shape · Wash & Blow Dry · Ears · Nose · Eyebrows · Luxury Hot Towel</p>
+            <a href="https://wa.me/447383449899?text=Hi%20Sam%2C%20I%27d%20like%20to%20book%20the%20Full%20Service%20Package%20please"
+               target="_blank" rel="noopener"
+               class="mt-4 block text-center whatsapp-btn text-white font-bold text-sm py-3 rounded-xl transition-all hover:scale-[1.02]">
+              Book the Full Service — £39
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-rule opacity-20"></div>
+
+  <!-- VIDEO GALLERY -->
+  <section id="gallery" class="py-20 px-4 bg-ink">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12" data-aos="fade-up">
+        <p class="text-gold/60 text-xs tracking-[0.4em] uppercase mb-3">The work</p>
+        <h2 class="font-serif font-black text-4xl md:text-5xl">See it for yourself.</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="md:col-span-2" data-aos="fade-up">
+          <div class="rounded-2xl overflow-hidden bg-card border border-white/5">
+            <video id="feature-video" class="plyr-video w-full" controls playsinline>
+              <source src="images/feature.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <p class="text-cream/30 text-xs mt-2 text-center">Chaplins of Sevenoaks</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div data-aos="fade-up" data-aos-delay="100">
+            <div class="rounded-2xl overflow-hidden bg-card border border-white/5">
+              <video id="gallery-video-1" class="plyr-video w-full" controls playsinline>
+                <source src="images/gallery-1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p class="text-cream/30 text-xs mt-2 text-center">Clean scissor cut</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="150">
+            <div class="rounded-2xl overflow-hidden bg-card border border-white/5">
+              <video id="gallery-video-2" class="plyr-video w-full" controls playsinline>
+                <source src="images/gallery-2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p class="text-cream/30 text-xs mt-2 text-center">Every piece with intention</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO GALLERY — real client work -->
+  <section class="py-20 px-4 bg-panel">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12" data-aos="fade-up">
+        <p class="text-gold/60 text-xs tracking-[0.4em] uppercase mb-3">Real cuts</p>
+        <h2 class="font-serif font-black text-4xl md:text-5xl">Every detail matters.</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div class="rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="0">
+          <img src="images/customer-1.webp" alt="Client haircut" class="w-full h-72 object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="50">
+          <img src="images/customer-2.webp" alt="Client haircut" class="w-full h-72 object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/hot-towel-shave.webp" alt="Luxury hot towel shave" class="w-full h-72 object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="0">
+          <img src="images/customer-3.webp" alt="Client with Sam" class="w-full h-72 object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="50">
+          <img src="images/customer-4.webp" alt="Client haircut" class="w-full h-72 object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/customer-5.webp" alt="Client haircut" class="w-full h-72 object-cover" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAMILY — toddler chair -->
+  <section class="py-20 px-4 bg-ink">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-up">
+        <p class="text-gold/60 text-xs tracking-[0.4em] uppercase mb-3">For the little ones</p>
+        <h2 class="font-serif font-black text-4xl md:text-5xl mb-4">The whole family.<br/><em class="italic text-gold">Welcome.</em></h2>
+        <p class="text-cream/55 leading-relaxed mb-6">Toddler chair. No fuss. No tears. Sam has a way with the youngest clients too — even the ones who arrive skeptical leave grinning.</p>
+        <div class="flex gap-3">
+          <span class="text-sm bg-card px-4 py-2 rounded-full border border-white/10 text-cream/60">Kids — £14</span>
+          <span class="text-sm bg-card px-4 py-2 rounded-full border border-white/10 text-cream/60">With wash — £17</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="rounded-2xl overflow-hidden">
+          <img src="images/toddler-chair-empty.webp" alt="Toddler chair at Chaplins" class="w-full h-60 object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-2xl overflow-hidden">
+          <img src="images/toddler-chair.webp" alt="Child in toddler chair at Chaplins" class="w-full h-60 object-cover" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-rule opacity-20"></div>
+
+  <!-- THE SHOP -->
+  <section class="py-20 px-4 bg-panel">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-up">
+        <p class="text-gold/60 text-xs tracking-[0.4em] uppercase mb-3">Find us</p>
+        <h2 class="font-serif font-black text-4xl md:text-5xl mb-6">Sevenoaks.<br/>Established.</h2>
+        <div class="grid grid-cols-2 gap-3">
+          <img src="images/store-front.webp" alt="Chaplins Barbers Sevenoaks shopfront" class="rounded-2xl w-full h-56 object-cover" loading="lazy" />
+          <img src="images/inner-view.webp" alt="Inside Chaplins Barbers" class="rounded-2xl w-full h-56 object-cover" loading="lazy" />
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-card rounded-2xl p-6 border border-white/5 mb-4">
+          <h3 class="font-serif font-bold text-lg text-gold mb-4">Opening Hours</h3>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between"><span class="text-cream/50">Monday – Wednesday</span><span class="font-semibold">09:00 – 18:00</span></div>
+            <div class="flex justify-between"><span class="text-cream/50">Thursday & Friday</span><span class="font-semibold">09:00 – 19:00</span></div>
+            <div class="flex justify-between"><span class="text-cream/50">Saturday</span><span class="font-semibold">08:00 – 18:00</span></div>
+            <div class="flex justify-between"><span class="text-cream/50">Sunday</span><span class="font-semibold">09:00 – 16:00</span></div>
+          </div>
+        </div>
+        <div class="bg-card rounded-2xl p-6 border border-white/5 mb-4">
+          <h3 class="font-serif font-bold text-lg text-gold mb-3">The Roundel</h3>
+          <img src="images/roundel.jpeg" alt="Chaplins Barbers London Underground roundel" class="rounded-xl w-full object-cover max-h-48" />
+          <p class="text-cream/40 text-xs mt-2 text-center">You'll know it when you see it.</p>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a href="https://wa.me/447383449899?text=Hi%20Sam%2C%20I%27d%20like%20to%20book%20a%20cut%20please"
+             target="_blank" rel="noopener"
+             class="whatsapp-btn text-white font-bold text-center py-4 rounded-2xl transition-all hover:scale-[1.02]">
+            Book on WhatsApp
+          </a>
+          <a href="tel:01732712861"
+             class="border border-cream/15 text-cream text-center font-semibold py-4 rounded-2xl hover:border-gold/40 hover:text-gold transition-all">
+            Call 01732 712861
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SHELF -->
+  <section class="py-20 px-4 bg-ink">
+    <div class="max-w-5xl mx-auto">
+      <div class="mb-12 text-center" data-aos="fade-up">
+        <p class="text-gold/60 text-xs tracking-[0.4em] uppercase mb-3">What we use</p>
+        <h2 class="font-serif font-black text-4xl md:text-5xl">Professional grade.<br/>In-house.</h2>
+        <p class="text-cream/40 text-sm mt-3">Available to take home.</p>
+      </div>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+        <div class="bg-card rounded-2xl p-4 border border-white/5 text-center" data-aos="fade-up" data-aos-delay="0">
+          <img src="images/product-fibre-gum.webp" alt="Fibre Gum" class="w-full h-32 object-contain mb-3" loading="lazy" />
+          <p class="text-xs font-semibold text-cream/60">Fibre Gum</p>
+        </div>
+        <div class="bg-card rounded-2xl p-4 border border-white/5 text-center" data-aos="fade-up" data-aos-delay="50">
+          <img src="images/product-matt-clay.webp" alt="Matt Clay" class="w-full h-32 object-contain mb-3" loading="lazy" />
+          <p class="text-xs font-semibold text-cream/60">Matt Clay</p>
+        </div>
+        <div class="bg-card rounded-2xl p-4 border border-white/5 text-center" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/product-moulding-wax.webp" alt="Moulding Wax" class="w-full h-32 object-contain mb-3" loading="lazy" />
+          <p class="text-xs font-semibold text-cream/60">Moulding Wax</p>
+        </div>
+        <div class="bg-card rounded-2xl p-4 border border-white/5 text-center" data-aos="fade-up" data-aos-delay="150">
+          <img src="images/product-pomade.webp" alt="Pomade" class="w-full h-32 object-contain mb-3" loading="lazy" />
+          <p class="text-xs font-semibold text-cream/60">Pomade</p>
+        </div>
+        <div class="bg-card rounded-2xl p-4 border border-white/5 text-center" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/product-putty.webp" alt="Putty" class="w-full h-32 object-contain mb-3" loading="lazy" />
+          <p class="text-xs font-semibold text-cream/60">Putty</p>
+        </div>
+        <div class="bg-card rounded-2xl p-4 border border-white/5 text-center" data-aos="fade-up" data-aos-delay="250">
+          <img src="images/product-shaper.webp" alt="Shaper" class="w-full h-32 object-contain mb-3" loading="lazy" />
+          <p class="text-xs font-semibold text-cream/60">Shaper</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-rule opacity-20"></div>
+
+  <!-- REVIEWS -->
+  <section id="reviews" class="py-20 px-4 bg-ink">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-10" data-aos="fade-up">
+        <div class="gold-rule w-10 opacity-60 mb-3"></div>
+        <h2 class="font-serif font-black text-4xl md:text-5xl">What they say.</h2>
+        <div class="flex items-center gap-3 mt-4">
+          <span id="stat-reviews-display" class="neon-gold font-serif font-black text-4xl">5.0</span>
+          <span class="text-gold text-xl">★★★★★</span>
+          <span class="text-cream/35 text-sm">Google · all five stars</span>
+        </div>
+      </div>
+      <!-- JS renders reviews here -->
+      <p class="text-center mt-6 text-cream/20 text-sm reviews-footer">All five stars · on Google</p>
+    </div>
+  </section>
+
+  <div class="gold-rule opacity-20"></div>
+
+  <!-- MUSIC PLAYER -->
+  <section class="py-16 px-4 bg-panel" data-aos="fade-up">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center mb-8">
+        <p class="text-gold/60 text-xs tracking-[0.4em] uppercase mb-2">The vibe</p>
+        <h2 class="font-serif font-black text-3xl">The sound of Chaplins.</h2>
+        <p class="text-cream/40 text-sm mt-2">Original tracks. Playing while you read.</p>
+      </div>
+      <audio id="chaplins-player" class="plyr-audio" controls>
+        <source src="audio/track-01.mp3" type="audio/mp3" />
+      </audio>
+      <div class="mt-4 space-y-2" id="track-list">
+        <div class="track-item flex items-center gap-3 bg-card rounded-xl px-4 py-3 cursor-pointer border border-white/5 transition-all hover:border-gold/30 active" data-src="audio/track-01.mp3">
+          <span class="text-gold text-xs w-5">01</span>
+          <span class="text-sm flex-1">Chaplins Shine Sinatra</span>
+          <span class="text-cream/30 text-xs">5:06</span>
+        </div>
+        <div class="track-item flex items-center gap-3 bg-card rounded-xl px-4 py-3 cursor-pointer border border-white/5 transition-all hover:border-gold/30" data-src="audio/track-02.mp3">
+          <span class="text-gold text-xs w-5">02</span>
+          <span class="text-sm flex-1">Fades & Flames (Chaplins Anthem)</span>
+          <span class="text-cream/30 text-xs">2:54</span>
+        </div>
+        <div class="track-item flex items-center gap-3 bg-card rounded-xl px-4 py-3 cursor-pointer border border-white/5 transition-all hover:border-gold/30" data-src="audio/track-03.mp3">
+          <span class="text-gold text-xs w-5">03</span>
+          <span class="text-sm flex-1">Chaplins Fresh Fade Friday</span>
+          <span class="text-cream/30 text-xs">4:23</span>
+        </div>
+        <div class="track-item flex items-center gap-3 bg-card rounded-xl px-4 py-3 cursor-pointer border border-white/5 transition-all hover:border-gold/30" data-src="audio/track-04.mp3">
+          <span class="text-gold text-xs w-5">04</span>
+          <span class="text-sm flex-1">Chaplins After Dark</span>
+          <span class="text-cream/30 text-xs">4:47</span>
+        </div>
+        <div class="track-item flex items-center gap-3 bg-card rounded-xl px-4 py-3 cursor-pointer border border-white/5 transition-all hover:border-gold/30" data-src="audio/track-05.mp3">
+          <span class="text-gold text-xs w-5">05</span>
+          <span class="text-sm flex-1">Walk-in Rough to Boss</span>
+          <span class="text-cream/30 text-xs">3:54</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK A CUT WIDGET -->
+  <section class="py-16 px-4 bg-ink">
+    <div class="max-w-xl mx-auto text-center">
+      <div class="gold-rule w-10 opacity-60 mb-3 mx-auto"></div>
+      <h2 class="font-serif font-black text-3xl md:text-4xl mb-2" data-aos="fade-up">Book a cut.</h2>
+      <p class="text-cream/50 text-sm mb-8">Tell Sam what you want and when. He'll confirm on WhatsApp.</p>
+      <div class="bg-card rounded-2xl p-6 border border-white/5 text-left" data-aos="fade-up" data-aos-delay="100">
+        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-1">Your name</label>
+        <input id="book-name" type="text" placeholder="e.g. James"
+          class="w-full bg-lift text-cream placeholder-cream/20 rounded-xl px-4 py-3 text-sm border border-white/8 focus:outline-none focus:border-gold/50 mb-4" />
+        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-1">Service</label>
+        <select id="book-service" class="w-full bg-lift text-cream rounded-xl px-4 py-3 text-sm border border-white/8 focus:outline-none focus:border-gold/50 mb-4">
+          <option value="">Choose a service...</option>
+          <option>Haircut — £19</option>
+          <option>Cut, Wash & Blow Dry — £23</option>
+          <option>Skin Fade — £24</option>
+          <option>Clipper Cut — £21</option>
+          <option>Beard Trim — £9</option>
+          <option>Beard Trim & Shape — £12</option>
+          <option>Luxury Hot Towel Shave — £15</option>
+          <option>Full Service Package — £39</option>
+          <option>Kids Haircut — £14</option>
+          <option>Seniors Haircut — £15</option>
+        </select>
+        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-1">Preferred day & time</label>
+        <input id="book-time" type="text" placeholder="e.g. Saturday morning, any time after 10"
+          class="w-full bg-lift text-cream placeholder-cream/20 rounded-xl px-4 py-3 text-sm border border-white/8 focus:outline-none focus:border-gold/50 mb-5" />
+        <p id="book-error" class="text-red-400 text-xs mb-3 hidden">Please fill in all fields.</p>
+        <button onclick="bookCut()"
+          class="w-full whatsapp-btn text-white font-bold text-lg py-4 rounded-2xl transition-all hover:scale-[1.02] flex items-center justify-center gap-3">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.113.549 4.1 1.51 5.833L.055 23.4l5.7-1.493A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.5-5.4-1.39l-.387-.23-4.016 1.053 1.07-3.912-.252-.4A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Send Booking Request
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 px-4 bg-panel border-t border-white/5">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-cream/25 text-xs">
+      <div class="font-serif font-bold text-cream/40 text-sm tracking-widest uppercase">Chaplins Barbers · 1889</div>
+      <div class="text-center">Sevenoaks · <a href="tel:01732712861" class="hover:text-gold transition-colors">01732 712861</a></div>
+      <div class="text-center text-cream/20">Mon–Wed 9–6 · Thu–Fri 9–7 · Sat 8–6 · Sun 9–4</div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+  /* ── Booking widget ── */
+  function bookCut() {
+    const name    = document.getElementById('book-name').value.trim();
+    const service = document.getElementById('book-service').value.trim();
+    const time    = document.getElementById('book-time').value.trim();
+    const err     = document.getElementById('book-error');
+    if (!name || !service || !time) { err.classList.remove('hidden'); return; }
+    err.classList.add('hidden');
+    const msg = 'Hi Sam, I\'d like to book a cut.\n\nName: ' + name + '\nService: ' + service + '\nPreferred time: ' + time;
+    window.open('https://wa.me/447383449899?text=' + encodeURIComponent(msg), '_blank');
+  }
+  </script>
+
+  <script>
+  /* ── Review cycling (localStorage batch rotation) ── */
+  const allReviews = [
+    { name: "Rami Empire",      initial: "R", role: "Fellow barber", text: "I'm a barber myself, so I'm very particular about who I trust with my hair. Sam delivers at the highest level — attention to detail, consistency, and professionalism are top tier." },
+    { name: "Ostin Lewis",      initial: "O", role: "Google",        text: "Incredible! The best haircut I've had in Sevenoaks in 18 years. The attention to detail is second to none. Will definitely be coming back." },
+    { name: "Stephanie Kelly",  initial: "S", role: "Google",        text: "Sam has provided my son with a haircut celebrity barbers couldn't. A great guy, very happy and a great professional. Highly recommend." },
+    { name: "Jack Bath",        initial: "J", role: "Google",        text: "Sam the owner was knowledgeable and took great care in his work. I've found my new barber!" },
+    { name: "R Souza",          initial: "R", role: "Local Guide",   text: "Sam is a very talented barber and an extremely friendly guy. My son and I visited his new shop and he was an absolute legend, both with the haircuts and the hospitality." },
+    { name: "Dominic O'Connor", initial: "D", role: "Local Guide",   text: "Popped in by chance on the way to town. Cut and shave were excellent, attention to detail spot on. Very friendly. I will return." },
+    { name: "George Wing",      initial: "G", role: "Google",        text: "Brilliant barbers! Sam really looks after his customers with time and care. Always welcoming and very fairly priced, especially for the level of service." },
+    { name: "Joe Barratt",      initial: "J", role: "Google",        text: "Super trim from a lovely barber! Sam is very welcoming and pays excellent attention to detail with his cuts. Would recommend to anyone." },
+    { name: "Lee Bonds",        initial: "L", role: "Google",        text: "Cut my hair and beard to perfection. What a lovely bloke — really polite and friendly, and a superb barber. So glad I went there." },
+    { name: "Lew Alexander",    initial: "L", role: "Local Guide",   text: "Best barber in Sevenoaks! My hair is longer and easy to get wrong, but Sam smashed it." },
+    { name: "ollie",            initial: "O", role: "Google",        text: "Excellent haircut. I got a fade — it was the best trim I've ever had. Sam was very friendly and offered me a drink on arrival. Will definitely be back." },
+    { name: "Sam Williamson",   initial: "S", role: "Google",        text: "Sam is the best barber in Sevenoaks. Would recommend him to anyone. Have been coming to him for years." },
+    { name: "Natalie Morgan",   initial: "N", role: "Google",        text: "My son will only go to Sam to have his hair cut. We love Sam — always so friendly and kind, and listens to exactly what my son wants." },
+    { name: "Alex B",           initial: "A", role: "Google",        text: "Very happy that this barber has opened in Sevenoaks having been a client previously in T Wells. Excellent cut every time!" },
+    { name: "Evgeny Aseev",     initial: "E", role: "Google",        text: "Friendly guys, good atmosphere, and they really take their time to get it right. Always leave happy." },
+    { name: "Mohammad Muhsin",  initial: "M", role: "Google",        text: "Hands down the best barber in the area 🔥" },
+    { name: "Codex",            initial: "C", role: "Google",        text: "First time here and really impressed. Sam was super attentive and made sure everything was just right. Exactly what I wanted." },
+    { name: "Erkan Esembi",     initial: "E", role: "Google",        text: "Best barbershop ever." },
+    { name: "James Parsons",    initial: "J", role: "Google",        text: "New go-to barbers in Sevenoaks. Sam is great. Best haircut I've had in the area and will keep returning." },
+    { name: "Nick Preen",       initial: "N", role: "Google",        text: "Top quality service from start to finish. Great experience 10/10." },
+    { name: "Thom A Petrucci",  initial: "T", role: "Google",        text: "Great trim, great price, friendly service. Would recommend, and will definitely be back." },
+    { name: "jak macgregor",    initial: "J", role: "Google",        text: "Very good haircut and very good service. Will definitely be my new barbers." },
+    { name: "bartłomiej",       initial: "B", role: "Google",        text: "The best barber in Kent! Highly recommended ❤️" },
+    { name: "U",                initial: "U", role: "Google",        text: "Best barber in Sevenoaks. Takes his time and listens exactly how you want your haircut. Worth every penny." },
+  ];
+
+  function renderReviewBatch() {
+    const section = document.getElementById('reviews');
+    if (!section) return;
+    const container = section.querySelector('.max-w-6xl');
+    if (!container) return;
+    const now = Date.now();
+    const storedTs  = localStorage.getItem('chap_batch_ts');
+    const storedIdx = localStorage.getItem('chap_batch_idx');
+    let batch = 0;
+    if (storedTs && storedIdx) {
+      if (now - parseInt(storedTs) > 4 * 60 * 60 * 1000) {
+        batch = (parseInt(storedIdx) + 1) % Math.ceil(allReviews.length / 6);
+        localStorage.setItem('chap_batch_ts',  now.toString());
+        localStorage.setItem('chap_batch_idx', batch.toString());
+      } else {
+        batch = parseInt(storedIdx);
+      }
+    } else {
+      localStorage.setItem('chap_batch_ts',  now.toString());
+      localStorage.setItem('chap_batch_idx', '0');
+    }
+    const reviews = allReviews.slice(batch * 6, batch * 6 + 6);
+    container.querySelectorAll('.reviews-grid').forEach(g => g.remove());
+    const grid = document.createElement('div');
+    grid.className = 'reviews-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4';
+    reviews.forEach(r => {
+      const card = document.createElement('div');
+      card.className = 'bg-card rounded-2xl p-5 border border-white/5';
+      card.innerHTML = `
+        <div class="text-gold text-sm mb-3">★★★★★</div>
+        <p class="text-cream/75 text-sm leading-relaxed italic">"${r.text}"</p>
+        <div class="mt-4 flex items-center gap-2.5">
+          <div class="w-7 h-7 rounded-full bg-gold/15 flex items-center justify-center text-gold text-xs font-black font-serif">${r.initial}</div>
+          <div>
+            <div class="text-sm font-semibold">${r.name}</div>
+            <div class="text-cream/30 text-xs">${r.role}</div>
+          </div>
+        </div>`;
+      grid.appendChild(card);
+    });
+    const footer = container.querySelector('.reviews-footer');
+    container.insertBefore(grid, footer);
+  }
+
+  document.addEventListener('DOMContentLoaded', renderReviewBatch);
+  </script>
+
+  <script>
+  /* ── Plyr: videos + audio player ── */
+  document.addEventListener('DOMContentLoaded', () => {
+    /* Videos */
+    ['feature-video', 'gallery-video-1', 'gallery-video-2'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) new Plyr(el, { controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'] });
+    });
+
+    /* Audio player with track switching */
+    const audioEl = document.getElementById('chaplins-player');
+    if (!audioEl) return;
+    const player = new Plyr(audioEl, {
+      controls: ['play', 'progress', 'current-time', 'mute', 'volume'],
+    });
+
+    document.querySelectorAll('.track-item').forEach(item => {
+      item.addEventListener('click', () => {
+        document.querySelectorAll('.track-item').forEach(t => t.classList.remove('active'));
+        item.classList.add('active');
+        player.source = { type: 'audio', sources: [{ src: item.dataset.src, type: 'audio/mp3' }] };
+        player.play();
+      });
+    });
+  });
+
+  /* ── AOS + stat counter ── */
+  AOS.init({ duration: 700, once: true, offset: 60 });
+
+  function animateCounter(id, target, decimals, duration) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const start = performance.now();
+    function step(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = (target * ease).toFixed(decimals);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const ratingObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCounter('stat-rating', 5.0, 1, 1200);
+        ratingObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.4 });
+
+  const ratingEl = document.getElementById('stat-rating');
+  if (ratingEl) ratingObserver.observe(ratingEl.closest('section'));
+  </script>
+
+</body>
+</html>
