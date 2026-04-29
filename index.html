@@ -287,29 +287,23 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="md:col-span-2" data-aos="fade-up">
-          <div class="rounded-2xl overflow-hidden bg-card border border-white/5">
-            <video id="feature-video" class="plyr-video w-full" controls playsinline>
-              <source src="images/feature.mp4" type="video/mp4" />
-            </video>
+          <div class="rounded-2xl overflow-hidden">
+            <img src="images/store-front.webp" alt="Chaplins Barbers Sevenoaks" class="w-full h-96 object-cover" />
           </div>
           <p class="text-cream/30 text-xs mt-2 text-center">Chaplins of Sevenoaks</p>
         </div>
         <div class="flex flex-col gap-4">
           <div data-aos="fade-up" data-aos-delay="100">
-            <div class="rounded-2xl overflow-hidden bg-card border border-white/5">
-              <video id="gallery-video-1" class="plyr-video w-full" controls playsinline>
-                <source src="images/gallery-1.mp4" type="video/mp4" />
-              </video>
+            <div class="rounded-2xl overflow-hidden">
+              <img src="images/inner-view.webp" alt="Inside Chaplins" class="w-full h-44 object-cover" />
             </div>
-            <p class="text-cream/30 text-xs mt-2 text-center">Clean scissor cut</p>
+            <p class="text-cream/30 text-xs mt-2 text-center">The shop floor</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="150">
-            <div class="rounded-2xl overflow-hidden bg-card border border-white/5">
-              <video id="gallery-video-2" class="plyr-video w-full" controls playsinline>
-                <source src="images/gallery-2.mp4" type="video/mp4" />
-              </video>
+            <div class="rounded-2xl overflow-hidden">
+              <img src="images/toddler-chair.webp" alt="The toddler chair" class="w-full h-44 object-cover" />
             </div>
-            <p class="text-cream/30 text-xs mt-2 text-center">Every piece with intention</p>
+            <p class="text-cream/30 text-xs mt-2 text-center">The chair parents tell each other about</p>
           </div>
         </div>
       </div>
@@ -649,14 +643,8 @@
   </script>
 
   <script>
-  /* ── Plyr: videos + audio player ── */
+  /* ── Plyr: audio player ── */
   document.addEventListener('DOMContentLoaded', () => {
-    /* Videos */
-    ['feature-video', 'gallery-video-1', 'gallery-video-2'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) new Plyr(el, { controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'fullscreen'] });
-    });
-
     /* Audio player with track switching */
     const audioEl = document.getElementById('chaplins-player');
     if (!audioEl) return;
