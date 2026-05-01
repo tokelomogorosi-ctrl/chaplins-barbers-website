@@ -5,6 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Chaplins Barbers Sevenoaks — Established 1889. Skin fades, scissor cuts, hot towel shaves. Voted best barber in Sevenoaks. Book via WhatsApp: 07383 449899." />
   <title>Chaplins Barbers | Sevenoaks | Est. 1889</title>
+
+  <!-- Open Graph (link previews on WhatsApp, iMessage, Slack, LinkedIn) -->
+  <meta property="og:title" content="Chaplins Barbers — Sevenoaks · 1889" />
+  <meta property="og:description" content="Skin fades, scissor cuts, hot towel shaves. The best cut you've had in years. Book via WhatsApp." />
+  <meta property="og:image" content="https://tokelomogorosi-ctrl.github.io/chaplins-barbers-website/images/storefront-2630.webp" />
+  <meta property="og:url" content="https://tokelomogorosi-ctrl.github.io/chaplins-barbers-website/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chaplins Barbers — Sevenoaks · 1889" />
+  <meta name="twitter:description" content="Skin fades, scissor cuts, hot towel shaves. Book via WhatsApp." />
+  <meta name="twitter:image" content="https://tokelomogorosi-ctrl.github.io/chaplins-barbers-website/images/storefront-2630.webp" />
+
+  <!-- LocalBusiness structured data — feeds Google's local search + knowledge panel -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Chaplins Barbers",
+    "description": "Traditional barber in Sevenoaks. Skin fades, scissor cuts, hot towel shaves. Established as a brand in tribute to Charles Chaplin (1889).",
+    "image": "https://tokelomogorosi-ctrl.github.io/chaplins-barbers-website/images/storefront-2630.webp",
+    "url": "https://tokelomogorosi-ctrl.github.io/chaplins-barbers-website/",
+    "telephone": "+441732712861",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Chatham Hill Road",
+      "addressLocality": "Sevenoaks",
+      "addressRegion": "Kent",
+      "addressCountry": "GB"
+    },
+    "priceRange": "££",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "24"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:30", "closes": "17:00" }
+    ],
+    "sameAs": [
+      "https://wa.me/447383449899"
+    ]
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -102,6 +149,42 @@
       .h2-draw::after { transition: none; width: 56px; }
       .price-row { transition: none; }
       [data-aos] { opacity: 1 !important; transform: none !important; }
+    }
+
+    /* Booking chips */
+    .chip {
+      background: #1a1a1a;
+      color: #f5f5f0;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      transition: background 0.18s ease, border-color 0.18s ease, transform 0.15s cubic-bezier(.2,.8,.2,1);
+    }
+    .chip:hover { border-color: rgba(201,168,76,0.4); }
+    .chip.selected {
+      background: rgba(201,168,76,0.15);
+      border-color: #C9A84C;
+      color: #f5f5f0;
+    }
+
+    /* Sam-tag for reviews that mention Sam */
+    .review-sam-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #C9A84C;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 3px 8px;
+      border-radius: 999px;
+      margin-left: 8px;
     }
 
     /* Cuts gallery — fade-in on render with subtle stagger via animation-delay */
@@ -451,6 +534,17 @@
     </div>
   </section>
 
+  <!-- THE CHAIR — quiet detail moment -->
+  <section class="py-16 px-4 bg-ink border-y border-white/5">
+    <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+      <p class="text-gold/60 text-xs tracking-[0.4em] uppercase mb-4">The chair</p>
+      <p class="font-serif italic text-2xl md:text-3xl leading-relaxed text-cream/85 mb-3">
+        "Thirty minutes in a barber's chair is something a man should look forward to."
+      </p>
+      <p class="text-cream/40 text-xs tracking-widest uppercase">Sam · Chaplins</p>
+    </div>
+  </section>
+
   <!-- FAMILY — toddler chair -->
   <section class="py-20 px-4 bg-ink">
     <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -579,9 +673,9 @@
   <section class="py-16 px-4 bg-panel" data-aos="fade-up">
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-8">
-        <p class="text-gold/60 text-xs tracking-[0.4em] uppercase mb-2">The vibe</p>
-        <h2 class="h2-draw font-serif font-black text-3xl">The sound of Chaplins.</h2>
-        <p class="text-cream/40 text-sm mt-2">Original tracks. Playing while you read.</p>
+        <p class="text-gold/60 text-xs tracking-[0.4em] uppercase mb-2">In the shop</p>
+        <h2 class="h2-draw font-serif font-black text-3xl">What's on.</h2>
+        <p class="text-cream/40 text-sm mt-2">Whatever's in the chair, this is what's in the air.</p>
       </div>
       <audio id="chaplins-player" class="plyr-audio" controls>
         <source src="audio/track-01.mp3" type="audio/mp3" />
@@ -616,38 +710,59 @@
     </div>
   </section>
 
-  <!-- BOOK A CUT WIDGET -->
+  <!-- BOOK A CUT WIDGET — chip-based, less typing -->
   <section class="py-16 px-4 bg-ink">
     <div class="max-w-xl mx-auto text-center">
       <div class="gold-rule w-10 opacity-60 mb-3 mx-auto"></div>
-      <h2 class="font-serif font-black text-3xl md:text-4xl mb-2" data-aos="fade-up">Book a cut.</h2>
-      <p class="text-cream/50 text-sm mb-8">Tell Sam what you want and when. He'll confirm on WhatsApp.</p>
+      <h2 class="h2-draw font-serif font-black text-3xl md:text-4xl mb-2" data-aos="fade-up">Book a cut.</h2>
+      <p class="text-cream/50 text-sm mb-8">Tap what you want, tap when. WhatsApp opens with your booking ready to send.</p>
       <div class="bg-card rounded-2xl p-6 border border-white/5 text-left" data-aos="fade-up" data-aos-delay="100">
-        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-1">Your name</label>
+
+        <!-- Service chips -->
+        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-2">Service</label>
+        <div id="book-service-chips" class="flex flex-wrap gap-2 mb-5">
+          <button type="button" class="chip" data-service="Haircut — £19">Haircut £19</button>
+          <button type="button" class="chip" data-service="Cut, Wash & Blow Dry — £23">Cut + Wash £23</button>
+          <button type="button" class="chip" data-service="Skin Fade — £21">Skin Fade £21</button>
+          <button type="button" class="chip" data-service="Clipper Cut — £15">Clipper £15</button>
+          <button type="button" class="chip" data-service="Beard Trim — £9">Beard Trim £9</button>
+          <button type="button" class="chip" data-service="Beard Trim & Shape — £12">Beard + Shape £12</button>
+          <button type="button" class="chip" data-service="Luxury Hot Towel Shave — £15">Hot Towel £15</button>
+          <button type="button" class="chip" data-service="Full Service Package — £39">Full Service £39</button>
+          <button type="button" class="chip" data-service="Kids Haircut — £14">Kids £14</button>
+          <button type="button" class="chip" data-service="Seniors Haircut — £15">Seniors £15</button>
+        </div>
+
+        <!-- Day chips (auto-generated to next 7 days, weekdays + weekend) -->
+        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-2">Day</label>
+        <div id="book-day-chips" class="flex flex-wrap gap-2 mb-5"></div>
+
+        <!-- Time-of-day chips -->
+        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-2">When in the day</label>
+        <div id="book-time-chips" class="flex flex-wrap gap-2 mb-5">
+          <button type="button" class="chip" data-time="Morning, before 11">Morning</button>
+          <button type="button" class="chip" data-time="Lunchtime, 11-2">Lunchtime</button>
+          <button type="button" class="chip" data-time="Afternoon, 2-5">Afternoon</button>
+          <button type="button" class="chip" data-time="Late afternoon, after 5">Late afternoon</button>
+          <button type="button" class="chip" data-time="Anytime — fit me in">Anytime</button>
+        </div>
+
+        <!-- Name -->
+        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-2">Your name</label>
         <input id="book-name" type="text" placeholder="e.g. James"
-          class="w-full bg-lift text-cream placeholder-cream/20 rounded-xl px-4 py-3 text-sm border border-white/8 focus:outline-none focus:border-gold/50 mb-4" />
-        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-1">Service</label>
-        <select id="book-service" class="w-full bg-lift text-cream rounded-xl px-4 py-3 text-sm border border-white/8 focus:outline-none focus:border-gold/50 mb-4">
-          <option value="">Choose a service...</option>
-          <option>Haircut — £19</option>
-          <option>Cut, Wash & Blow Dry — £23</option>
-          <option>Skin Fade — £21</option>
-          <option>Clipper Cut — £15</option>
-          <option>Beard Trim — £9</option>
-          <option>Beard Trim & Shape — £12</option>
-          <option>Luxury Hot Towel Shave — £15</option>
-          <option>Full Service Package — £39</option>
-          <option>Kids Haircut — £14</option>
-          <option>Seniors Haircut — £15</option>
-        </select>
-        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-1">Preferred day & time</label>
-        <input id="book-time" type="text" placeholder="e.g. Saturday morning, any time after 10"
-          class="w-full bg-lift text-cream placeholder-cream/20 rounded-xl px-4 py-3 text-sm border border-white/8 focus:outline-none focus:border-gold/50 mb-5" />
-        <p id="book-error" class="text-red-400 text-xs mb-3 hidden">Please fill in all fields.</p>
+          class="w-full bg-lift text-cream placeholder-cream/20 rounded-xl px-4 py-3 text-sm border border-white/8 focus:outline-none focus:border-gold/50 mb-3" />
+
+        <!-- Optional note -->
+        <label class="block text-xs text-cream/40 uppercase tracking-wider mb-2">Anything Sam should know <span class="text-cream/25 normal-case tracking-normal">(optional)</span></label>
+        <textarea id="book-note" placeholder="e.g. first time, a number 2 on the sides, or in for the wedding next month"
+          rows="2"
+          class="w-full bg-lift text-cream placeholder-cream/20 rounded-xl px-4 py-3 text-sm border border-white/8 focus:outline-none focus:border-gold/50 mb-5 resize-none"></textarea>
+
+        <p id="book-error" class="text-red-400 text-xs mb-3 hidden">Pick a service, a day, a time, and add your name.</p>
         <button onclick="bookCut()"
           class="w-full whatsapp-btn text-white font-bold text-lg py-4 rounded-2xl transition-all hover:scale-[1.02] flex items-center justify-center gap-3">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.113.549 4.1 1.51 5.833L.055 23.4l5.7-1.493A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.8-.5-5.4-1.39l-.387-.23-4.016 1.053 1.07-3.912-.252-.4A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Send Booking Request
+          Send Booking on WhatsApp
         </button>
       </div>
     </div>
@@ -665,16 +780,71 @@
   <!-- SCRIPTS -->
   <script>
   /* ── Booking widget ── */
+  /* ── Booking chip selection state ── */
+  let bookSelection = { service: null, day: null, time: null };
+
+  function buildDayChips() {
+    const wrap = document.getElementById('book-day-chips');
+    if (!wrap) return;
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const today = new Date();
+    const items = [];
+    // Show next 7 days, label "Today" / "Tomorrow" for first two
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(today);
+      d.setDate(today.getDate() + i);
+      const dayName = days[d.getDay()];
+      const dateNum = d.getDate();
+      let label;
+      if (i === 0) label = 'Today';
+      else if (i === 1) label = 'Tomorrow';
+      else label = `${dayName} ${dateNum}`;
+      const value = `${dayName} ${dateNum}${i === 0 ? ' (today)' : i === 1 ? ' (tomorrow)' : ''}`;
+      // Closed Sundays — disable Sun chips
+      const closed = d.getDay() === 0;
+      items.push(`<button type="button" class="chip${closed ? ' opacity-40 cursor-not-allowed' : ''}" data-day="${value}" ${closed ? 'disabled title="Closed Sundays"' : ''}>${label}${closed ? ' · closed' : ''}</button>`);
+    }
+    wrap.innerHTML = items.join('');
+  }
+
+  function wireChipGroups() {
+    [['book-service-chips', 'service'],
+     ['book-day-chips', 'day'],
+     ['book-time-chips', 'time']].forEach(([groupId, key]) => {
+      const group = document.getElementById(groupId);
+      if (!group) return;
+      group.addEventListener('click', e => {
+        const btn = e.target.closest('.chip');
+        if (!btn || btn.disabled) return;
+        group.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+        btn.classList.add('selected');
+        bookSelection[key] = btn.dataset[key];
+      });
+    });
+  }
+
   function bookCut() {
-    const name    = document.getElementById('book-name').value.trim();
-    const service = document.getElementById('book-service').value.trim();
-    const time    = document.getElementById('book-time').value.trim();
-    const err     = document.getElementById('book-error');
-    if (!name || !service || !time) { err.classList.remove('hidden'); return; }
+    const name = document.getElementById('book-name').value.trim();
+    const note = document.getElementById('book-note').value.trim();
+    const err  = document.getElementById('book-error');
+    if (!bookSelection.service || !bookSelection.day || !bookSelection.time || !name) {
+      err.classList.remove('hidden');
+      return;
+    }
     err.classList.add('hidden');
-    const msg = 'Hi Sam, I\'d like to book a cut.\n\nName: ' + name + '\nService: ' + service + '\nPreferred time: ' + time;
+    let msg = 'Hi Sam, I\'d like to book a cut.\n\n';
+    msg += 'Name: ' + name + '\n';
+    msg += 'Service: ' + bookSelection.service + '\n';
+    msg += 'Day: ' + bookSelection.day + '\n';
+    msg += 'When: ' + bookSelection.time;
+    if (note) msg += '\n\nNote: ' + note;
     window.open('https://wa.me/447383449899?text=' + encodeURIComponent(msg), '_blank');
   }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    buildDayChips();
+    wireChipGroups();
+  });
   </script>
 
   <script>
@@ -734,8 +904,13 @@
     reviews.forEach(r => {
       const card = document.createElement('div');
       card.className = 'bg-card rounded-2xl p-5 border border-white/5';
+      const mentionsSam = /\bSam\b/.test(r.text);
+      const samTag = mentionsSam ? '<span class="review-sam-tag">👤 Sam</span>' : '';
       card.innerHTML = `
-        <div class="text-gold text-sm mb-3">★★★★★</div>
+        <div class="flex items-center justify-between mb-3">
+          <div class="text-gold text-sm">★★★★★</div>
+          ${samTag}
+        </div>
         <p class="text-cream/75 text-sm leading-relaxed italic">"${r.text}"</p>
         <div class="mt-4 flex items-center gap-2.5">
           <div class="w-7 h-7 rounded-full bg-gold/15 flex items-center justify-center text-gold text-xs font-black font-serif">${r.initial}</div>
