@@ -132,21 +132,32 @@
   <style>
     html { scroll-behavior: smooth; }
 
-    /* Hero video — IMG_3369 footage, web-optimised */
-    .hero-video {
+    /* Hero still — Ken Burns slow drift, plays at all aspect ratios without distortion */
+    .hero-still {
       position: absolute; inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
+      object-position: 50% 35%;
       opacity: 0.40;
+      transform-origin: center 40%;
+      animation: kenBurns 24s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    @keyframes kenBurns {
+      0%   { transform: scale(1.04) translate3d(0, 0, 0); }
+      100% { transform: scale(1.12) translate3d(-1.5%, -2%, 0); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .hero-video { display: none; }
-      .hero-poster-fallback {
-        position: absolute; inset: 0;
-        width: 100%; height: 100%;
-        object-fit: cover;
-        opacity: 0.40;
-      }
+      .hero-still { animation: none; transform: scale(1.06); }
+    }
+
+    /* Portrait clip in the gallery section — finally where it belongs */
+    .gallery-portrait-video {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      display: block;
+      border-radius: inherit;
     }
 
     /* Hero reveal — sequential elements, headline kept intact (Director's call — it's cool) */
@@ -322,24 +333,16 @@
 
   <!-- HERO -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-ink pt-16">
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.jpg">
-      <source src="images/hero-loop.webm" type="video/webm" />
-      <source src="images/hero-loop.mp4" type="video/mp4" />
-    </video>
-    <img class="hero-poster-fallback hidden" src="images/hero-poster.jpg" alt="Chaplins Barbers Sevenoaks" aria-hidden="true" />
+    <img class="hero-still" src="images/sam-with-customer.webp" alt="Sam at work in the Chaplins chair" aria-hidden="true" />
     <div class="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/40 to-ink"></div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
       <p class="hero-tag text-gold/70 text-xs tracking-[0.4em] uppercase mb-6">Sevenoaks · Est. 1889</p>
-      <h1 class="hero-h1 font-serif font-black text-5xl md:text-7xl lg:text-8xl leading-tight mb-6">
+      <h1 class="hero-h1 font-serif font-black text-5xl md:text-7xl lg:text-8xl leading-tight mb-8">
         The best cut<br />
         <em class="italic text-gold">you've had</em><br />
         in years.
       </h1>
-      <blockquote class="hero-quote max-w-lg mx-auto mb-8">
-        <p class="text-cream/60 text-sm italic leading-relaxed">"Best haircut I've had in Sevenoaks in 18 years. The attention to detail is second to none."</p>
-        <cite class="text-gold/60 text-xs mt-2 block tracking-wider">— OSTIN LEWIS · GOOGLE</cite>
-      </blockquote>
       <div class="hero-ctas flex flex-col sm:flex-row gap-3 justify-center">
         <a href="https://wa.me/447383449899?text=Hi%20Sam%2C%20I%27d%20like%20to%20book%20a%20cut%20please"
            target="_blank" rel="noopener"
@@ -353,6 +356,9 @@
           Call 01732 712861
         </a>
       </div>
+      <p class="hero-coda text-cream/50 text-sm mt-6 tracking-wide">
+        or just walk in <span class="text-gold/40">·</span> Sam's chair's open most days
+      </p>
     </div>
   </section>
 
@@ -550,22 +556,31 @@
         <h2 class="h2-draw font-serif font-black text-4xl md:text-5xl">See it for yourself.</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="md:col-span-2" data-aos="fade-up">
+        <div data-aos="fade-up">
           <div class="rounded-2xl overflow-hidden">
-            <img src="images/store-front.webp" alt="Chaplins Barbers Sevenoaks" class="w-full h-96 object-cover" />
+            <video class="gallery-portrait-video" autoplay muted loop playsinline preload="metadata" poster="images/hero-poster.jpg">
+              <source src="images/hero-loop.webm" type="video/webm" />
+              <source src="images/hero-loop.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <p class="text-cream/30 text-xs mt-2 text-center">In the chair</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="rounded-2xl overflow-hidden">
+            <img src="images/store-front.webp" alt="Chaplins Barbers Sevenoaks shopfront" class="w-full h-96 object-cover" loading="lazy" />
           </div>
           <p class="text-cream/30 text-xs mt-2 text-center">Chaplins of Sevenoaks</p>
         </div>
-        <div class="flex flex-col gap-4">
-          <div data-aos="fade-up" data-aos-delay="100">
+        <div class="flex flex-col gap-4" data-aos="fade-up" data-aos-delay="150">
+          <div>
             <div class="rounded-2xl overflow-hidden">
-              <img src="images/inner-view.webp" alt="Inside Chaplins" class="w-full h-44 object-cover" />
+              <img src="images/inner-view.webp" alt="Inside Chaplins" class="w-full h-44 object-cover" loading="lazy" />
             </div>
             <p class="text-cream/30 text-xs mt-2 text-center">The shop floor</p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="150">
+          <div>
             <div class="rounded-2xl overflow-hidden">
-              <img src="images/toddler-chair.webp" alt="The toddler chair" class="w-full h-44 object-cover" />
+              <img src="images/toddler-chair.webp" alt="The toddler chair" class="w-full h-44 object-cover" loading="lazy" />
             </div>
             <p class="text-cream/30 text-xs mt-2 text-center">The chair parents tell each other about</p>
           </div>
@@ -637,13 +652,35 @@
       </div>
       <div data-aos="fade-up" data-aos-delay="100">
         <div class="bg-card rounded-2xl p-6 border border-white/5 mb-4">
-          <h3 class="font-serif font-bold text-lg text-gold mb-4">Opening Hours</h3>
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-serif font-bold text-lg text-gold">Opening Hours</h3>
+            <span class="inline-flex items-center gap-1.5 text-[11px] tracking-wider uppercase text-gold bg-gold/10 border border-gold/30 rounded-full px-3 py-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold/80"></span>
+              Walk-ins welcome
+            </span>
+          </div>
           <div class="space-y-2 text-sm">
             <div class="flex justify-between"><span class="text-cream/50">Monday – Wednesday</span><span class="font-semibold">09:00 – 18:00</span></div>
             <div class="flex justify-between"><span class="text-cream/50">Thursday & Friday</span><span class="font-semibold">09:00 – 19:00</span></div>
             <div class="flex justify-between"><span class="text-cream/50">Saturday</span><span class="font-semibold">08:00 – 18:00</span></div>
             <div class="flex justify-between"><span class="text-cream/50">Sunday</span><span class="font-semibold">09:00 – 16:00</span></div>
           </div>
+        </div>
+
+        <div class="bg-card rounded-2xl p-6 border border-white/5 mb-4">
+          <h3 class="font-serif font-bold text-lg text-gold mb-3">The shop</h3>
+          <address class="not-italic text-sm text-cream/80 leading-relaxed mb-4">
+            Chaplins Barbers<br/>
+            Chatham Hill Road<br/>
+            Sevenoaks, Kent<br/>
+            <span class="text-cream/60">TN14 5AP</span>
+          </address>
+          <a href="https://www.google.com/maps/search/?api=1&query=Chaplins+Barbers+Chatham+Hill+Road+Sevenoaks+TN14+5AP"
+             target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 text-gold text-sm font-semibold border border-gold/30 rounded-xl px-4 py-2.5 hover:bg-gold/10 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Open in Google Maps
+          </a>
         </div>
         <div class="bg-card rounded-2xl p-6 border border-white/5 mb-4">
           <h3 class="font-serif font-bold text-lg text-gold mb-3">The Roundel</h3>
