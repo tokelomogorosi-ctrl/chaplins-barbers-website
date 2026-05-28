@@ -132,7 +132,15 @@
   <style>
     html { scroll-behavior: smooth; }
 
-    /* Hero still — Ken Burns slow drift, plays at all aspect ratios without distortion */
+    /* Hero clipper loop — seedance-rendered exploded-view, palindrome looped */
+    .hero-clip {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      opacity: 0.45;
+    }
+    /* Ken Burns still — reduced-motion fallback + slow-connection poster */
     .hero-still {
       position: absolute; inset: 0;
       width: 100%; height: 100%;
@@ -142,13 +150,15 @@
       transform-origin: center 40%;
       animation: kenBurns 24s ease-in-out infinite alternate;
       will-change: transform;
+      display: none;
     }
     @keyframes kenBurns {
       0%   { transform: scale(1.04) translate3d(0, 0, 0); }
       100% { transform: scale(1.12) translate3d(-1.5%, -2%, 0); }
     }
     @media (prefers-reduced-motion: reduce) {
-      .hero-still { animation: none; transform: scale(1.06); }
+      .hero-clip { display: none; }
+      .hero-still { display: block; animation: none; transform: scale(1.06); }
     }
 
     /* Portrait clip in the gallery section — finally where it belongs */
@@ -333,8 +343,12 @@
 
   <!-- HERO -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-ink pt-16">
-    <img class="hero-still" src="images/sam-with-customer.webp" alt="Sam at work in the Chaplins chair" aria-hidden="true" />
-    <div class="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/40 to-ink"></div>
+    <video class="hero-clip" autoplay muted loop playsinline preload="metadata" poster="images/sam-with-customer.webp" aria-hidden="true">
+      <source src="images/hero-clipper-loop.webm" type="video/webm" />
+      <source src="images/hero-clipper-loop.mp4" type="video/mp4" />
+    </video>
+    <img class="hero-still" src="images/sam-with-customer.webp" alt="" aria-hidden="true" />
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/55 to-ink"></div>
 
     <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
       <p class="hero-tag text-gold/70 text-xs tracking-[0.4em] uppercase mb-6">Sevenoaks · Est. 1889</p>
