@@ -23,4 +23,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://tokelomogorosi-ctrl.github.io/chaplins-barbers-website/sitemap.xml
+Sitemap: https://chaplinsofsevenoaks.co.uk/sitemap.xml
