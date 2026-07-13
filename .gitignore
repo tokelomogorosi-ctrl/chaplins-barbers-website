@@ -1,0 +1,4 @@
+
+# session files carry credentials — never commit
+.letta/
+.claude/
